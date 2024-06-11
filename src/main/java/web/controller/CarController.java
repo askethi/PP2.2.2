@@ -18,7 +18,6 @@ public class CarController {
 
     @GetMapping("/cars")
     public String index(@RequestParam(defaultValue="5") int count, ModelMap model) {
-    //    model.addAttribute("message", "Hello Thymeleaf");
         model.addAttribute("cars", cs.takeNCars(count));
         return "cars";
     }
